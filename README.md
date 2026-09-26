@@ -1,3 +1,11 @@
+# SMART DETECTION ML LAYER
+How it works:
+
+Synthetic traffic generator — click "Start Simulation" and it streams fake DNS queries (mix of normal domains, known-bad domains, and DGA-style random/high-entropy domains) into the live feed.
+Feature extraction — each query gets scored on request rate, domain entropy, subdomain depth, and time-of-day deviation.
+Real Isolation Forest — trained in-browser on a baseline of normal traffic, then scores each new query for anomalousness (this is an actual small isolation forest, not a canned rule).
+Two-tier detection — known-bad domains get caught instantly by the static blocklist; novel suspicious traffic gets caught by the ML layer.
+LLM explainer — click any flagged or blocked row, then "Explain with LLM" to get a live, plain-language explanation of why it looked suspicious, generated on the spot from that query's actual feature values.
 # 🛡️ NetShield
 
 **A self-hosted DNS firewall that blocks ads, trackers, and unsafe content — on every device, on every network, anywhere in the world.**
