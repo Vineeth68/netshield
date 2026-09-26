@@ -1,0 +1,19 @@
+# NetShield curated blocklists
+# One URL per line. Lines starting with # are ignored.
+# Loaded automatically by scripts/install.sh via `pihole -a adlist add`.
+
+# --- Ads & Trackers ---
+https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+https://v.firebog.net/hosts/AdguardDNS.txt
+https://v.firebog.net/hosts/Easylist.txt
+
+# --- Trackers / malvertising ---
+https://v.firebog.net/hosts/Prigent-Ads.txt
+
+# --- Betting / gambling sites ---
+https://raw.githubusercontent.com/blocklistproject/Lists/master/gambling.txt
+
+# --- Explicit / adult content (family-safe mode) ---
+https://raw.githubusercontent.com/blocklistproject/Lists/master/porn.txt
+
+# Add your own curated lists below:
